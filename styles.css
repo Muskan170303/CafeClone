@@ -14,6 +14,7 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
+
 }
 
 section{
@@ -84,18 +85,18 @@ body{
     font-size: 1.6rem;
     color:#fff;
 }
-.header .navbar .a:hover{
+.header .navbar a:hover{
     color: var(--main-color);
     border-bottom: .1rem solid var(--main-color);
     padding-bottom: .5rem;
 }
-.hearder .icons div{
+.header .icons div{
     color:#fff;
     cursor:pointer;
     font-size: 2.5rem;
     margin-left: 2rem;
 }
-.hearder .icons div:hover{
+.header .icons div:hover{
     color:var(--main-color);
 }
 
@@ -106,7 +107,7 @@ body{
     position: absolute;
     top: 115%;right:7%;
     background: #fff;
-    width:50rem;
+    width:25rem;
     height: 5rem;
     display: flex;
     align-items: center;
@@ -137,28 +138,28 @@ body{
     position: absolute;
     top:100%;right:-100%;
     height: calc(100vh - 9.5rem);
-    width:35rem;
+    width:25rem;
     background: #fff;
     padding:0 1.5rem;
 }
 .header .cart-items-container.active{
     right:0;
 }
-.header.cart-items-container.cart-item{
+.header .cart-items-container .cart-item{
     position:relative;
     margin:2rem 0;
     display:flex;
     align-items: center;
     gap:1.5rem;
 }
-.header.cart-items-container.cart-item.fa-times{
+.header .cart-items-container .cart-item .fa-items{
     position: absolute;
     top:1rem; right:1rem;
     font-size: 2rem;
     cursor: pointer;
     color:var(--black);
 }
-.header.cart-items-container.cart-item.fa-times:hover{
+.header .cart-items-container .cart-item:hover{
     color:var(--main-color);
 }
 .header .cart-items-container .cart-item img{
@@ -177,11 +178,35 @@ body{
     width:100%;
     text-align: center;
 }
+.header .nav-links{
+    position: absolute;
+    top:100%;right:-100%;
+    height: calc(100vh - 9.5rem);
+    width:15rem;
+    background: #fff;
+    padding:0 1.5rem;
+}
+.header .nav-links.active{
+    right:0;
+}
+.header .nav-links .nitem{
+    position:relative;
+    margin:2rem 0;
+    display:flex;
+    align-items: center;
+    gap:1.5rem;
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 400;
+}
+.header .nav-links .nitem:hover{
+    color:var(--main-color);
+}
 .home{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(../wallpapers/home-img.jpeg);
+    background: url(./wallpapers/home-img.jpeg);
     background-size: cover;
     background-position: center;
 }
@@ -459,3 +484,12 @@ body{
 .footer .links a:hover{
     background: var(--main-color);
 }
+
+@media screen and (max-width: 850px) {
+    .navbar{
+        display: none;
+    }
+    #menu-btn{
+        display:inline;
+    }
+  }
